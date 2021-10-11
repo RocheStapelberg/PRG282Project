@@ -10,26 +10,11 @@ using System.Windows.Forms;
 
 namespace PRG282Project.PresentationLayer
 {
-    public partial class frmLogin : Form
+    public partial class frmMain : Form
     {
-        public frmLogin()
+        public frmMain()
         {
             InitializeComponent();
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLine1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblHeading_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
