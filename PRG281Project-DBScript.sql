@@ -54,3 +54,69 @@ INSERT INTO Students VALUES (17, 'Valdez', 'Pretourius', '29-09-1992','Male','08
 INSERT INTO Students VALUES (18, 'Lucas', 'Thompson', '26-12-2001','Male','083 522 4432', '2049 Mosman Rd','');
 INSERT INTO Students VALUES (19, 'Deborah', 'Oluwadele', '24-07-1991','Female','082 476 6993', '1881 St. John Street','');
 INSERT INTO Students VALUES (20, 'Alex', 'Harris', '02-02-2001','Male','082 506 6176', '1545 Doreen St','');
+GO
+CREATE PROCEDURE spGetStudents
+AS
+BEGIN
+	SELECT * FROM Students
+END
+GO
+CREATE PROCEDURE spAddStudent
+(
+	@StudentNumber int,
+	@StudentName VARCHAR(50),
+	@StudentSurname VARCHAR(50),
+	@DateofBirth VARCHAR(50),
+	@Gender VARCHAR(50),
+	@StudentPhoneNumber VARCHAR(50),
+	@StudentAddress VARCHAR(50)
+)
+AS
+BEGIN
+	INSERT INTO Students
+	VALUES (@StudentNumber, @StudentName, @StudentSurname, @DateofBirth, @Gender, @StudentPhoneNumber, @StudentAddress)
+END
+GO
+CREATE PROCEDURE spUpdateStudent
+(
+	@StudentNumber int,
+	@StudentName VARCHAR(50),
+	@StudentSurname VARCHAR(50),
+	@DateofBirth VARCHAR(50),
+	@Gender VARCHAR(50),
+	@StudentPhoneNumber VARCHAR(50),
+	@StudentAddress VARCHAR(50)
+)
+AS
+BEGIN
+	UPDATE Students
+	SET StudentNumber = @StudentNumber,
+		StudentName = @StudentName, 
+		StudentSurname = @StudentSurname, 
+		DateOfBirth = @DateofBirth, 
+		Gender = @Gender, 
+		StudentPhoneNumber = @StudentPhoneNumber, 
+		StudentAddress = @StudentAddress
+		WHERE StudentNumber = @StudentNumber
+END
+GO
+CREATE PROCEDURE spDeleteStudent
+(
+	@StudentNumber int
+)
+AS
+BEGIN 
+	DELETE FROM Student
+	WHERE StudentNumber = @StudentNumber
+END
+GO
+CREATE PROCEDURE spSearchStudent
+(
+	@StudentNumber int
+)
+AS
+BEGIN 
+	SELECT * FROM Student
+	WHERE StudentNumber = @StudentNumber
+END
+

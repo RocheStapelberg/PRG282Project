@@ -51,11 +51,6 @@ namespace PRG282Project.PresentationLayer
         {
             users = handler.GetUsers();
         }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }
      

@@ -39,6 +39,7 @@ namespace PRG282Project.DataLayer
             return dt;
         }
 
+        //@StudentNumber, @StudentName, @StudentSurname, @DateofBirth, @Gender, @StudentPhoneNumber, @StudentAddress
         public void InsertStudent(int studentNum, string name, string surname, string dateOfBirth, string phone, string address,)
         {
             using(SqlConnection connection = new SqlConnection(connectionString))
