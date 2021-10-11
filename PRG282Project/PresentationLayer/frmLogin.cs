@@ -23,8 +23,9 @@ namespace PRG282Project.PresentationLayer
             handler.CreateFile();
         }
 
-        private void btnLogIn_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
+            Application.Exit();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -57,3 +58,4 @@ namespace PRG282Project.PresentationLayer
         }
     }
 }
+     

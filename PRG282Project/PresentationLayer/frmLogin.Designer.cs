@@ -109,7 +109,6 @@ namespace PRG282Project.PresentationLayer
             this.btnLogIn.TabIndex = 1;
             this.btnLogIn.Text = "Log In";
             this.btnLogIn.UseVisualStyleBackColor = false;
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // btnRegister
             // 
