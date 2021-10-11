@@ -15,6 +15,12 @@ namespace PRG282Project.PresentationLayer
         public frmLogin()
         {
             InitializeComponent();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
     }
 }
+     
