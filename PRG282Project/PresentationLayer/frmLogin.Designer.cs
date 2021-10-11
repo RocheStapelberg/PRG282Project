@@ -39,8 +39,8 @@ namespace PRG282Project.PresentationLayer
             this.btnRegister = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPass = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblHeading = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
@@ -122,6 +122,7 @@ namespace PRG282Project.PresentationLayer
             this.btnRegister.TabIndex = 2;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // lblUsername
             // 
@@ -145,19 +146,19 @@ namespace PRG282Project.PresentationLayer
             this.lblPass.TabIndex = 4;
             this.lblPass.Text = "Password:";
             // 
-            // textBox1
+            // txtPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(460, 260);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtPassword.Location = new System.Drawing.Point(460, 260);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(218, 20);
+            this.txtPassword.TabIndex = 5;
             // 
-            // textBox2
+            // txtUsername
             // 
-            this.textBox2.Location = new System.Drawing.Point(460, 199);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(218, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtUsername.Location = new System.Drawing.Point(460, 199);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(218, 20);
+            this.txtUsername.TabIndex = 6;
             // 
             // lblHeading
             // 
@@ -175,12 +176,13 @@ namespace PRG282Project.PresentationLayer
             this.btnExit.BackColor = System.Drawing.Color.Black;
             this.btnExit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Red;
-            this.btnExit.Location = new System.Drawing.Point(723, 12);
+            this.btnExit.Location = new System.Drawing.Point(665, 12);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(42, 41);
+            this.btnExit.Size = new System.Drawing.Size(100, 41);
             this.btnExit.TabIndex = 8;
-            this.btnExit.Text = "X";
+            this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmLogin
             // 
@@ -190,8 +192,8 @@ namespace PRG282Project.PresentationLayer
             this.ClientSize = new System.Drawing.Size(777, 531);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblHeading);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnRegister);
@@ -203,6 +205,7 @@ namespace PRG282Project.PresentationLayer
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBClogo)).EndInit();
@@ -222,8 +225,8 @@ namespace PRG282Project.PresentationLayer
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblPass;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Button btnExit;
     }
