@@ -15,10 +15,6 @@ namespace PRG282Project.PresentationLayer
         public frmLogin()
         {
             InitializeComponent();
-        }
-
-        private void btnLogIn_Click(object sender, EventArgs e)
         {
-        }
     }
 }
