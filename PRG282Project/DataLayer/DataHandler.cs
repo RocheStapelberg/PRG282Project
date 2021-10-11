@@ -10,7 +10,7 @@ namespace PRG282Project.DataLayer
 {
     class DataHandler
     {
-        string connectionString = @"Server=(local); Initial Catalog=; Integrated Security=SSPI;";
+        string connectionString = @"Server=(local); Initial Catalog=BelgiumStudents; Integrated Security=SSPI;";
         public DataHandler() { }
         public string TestConnection()
         {
@@ -28,10 +28,10 @@ namespace PRG282Project.DataLayer
 
         }
 
-        public DataTable GetStudent()
+        public DataTable getStudents()
         {
             SqlConnection con = new SqlConnection(connectionString);
-            SqlDataAdapter adapter = new SqlDataAdapter("spGetStudent", connectionString);
+            SqlDataAdapter adapter = new SqlDataAdapter("spGetStudents", connectionString);
             adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
             
             DataTable dt = new DataTable();
@@ -40,7 +40,7 @@ namespace PRG282Project.DataLayer
         }
 
         //@StudentNumber, @StudentName, @StudentSurname, @DateofBirth, @Gender, @StudentPhoneNumber, @StudentAddress
-        public void InsertStudent(int studentNum, string name, string surname, string dateOfBirth, string phone, string address,)
+        public void insertStudent(int studentNum, string name, string surname, string gender, string dateOfBirth, string phone, string address)
         {
             using(SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -48,6 +48,69 @@ namespace PRG282Project.DataLayer
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@StudentNumber", studentNum);
+                cmd.Parameters.AddWithValue("@StudentName", name);
+                cmd.Parameters.AddWithValue("@StudentSurname", surname);
+                cmd.Parameters.AddWithValue("@DateofBirth", dateOfBirth);
+                cmd.Parameters.AddWithValue("@Gender", gender);
+                cmd.Parameters.AddWithValue("@StudentPhoneNumber", phone);
+                cmd.Parameters.AddWithValue(" @StudentAddress", address);
+
+                connection.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void updateStudent(int studentNum, string name, string surname, string gender, string dateOfBirth, string phone, string address)
+        {
+            using(SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("spUpdateStudent", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@StudentNumber", studentNum);
+                cmd.Parameters.AddWithValue("@StudentName", name);
+                cmd.Parameters.AddWithValue("@StudentSurname", surname);
+                cmd.Parameters.AddWithValue("@DateofBirth", dateOfBirth);
+                cmd.Parameters.AddWithValue("@Gender", gender);
+                cmd.Parameters.AddWithValue("@StudentPhoneNumber", phone);
+                cmd.Parameters.AddWithValue(" @StudentAddress", address);
+
+                connection.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void deleteData(int studentNumber)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("spDeleteStudent", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@StudentNumber", studentNumber);
+
+                connection.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public DataTable searchStudent(int studentNumber)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("spSearchStudent", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@StudentNumber", studentNumber);
+
+                connection.Open();
+                DataTable dt = new DataTable();
+
+                using(SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    dt.Load(dr);
+                    return dt;
+                }
             }
         }
     }
