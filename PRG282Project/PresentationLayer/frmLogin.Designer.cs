@@ -80,7 +80,6 @@ namespace PRG282Project.PresentationLayer
             this.lblLine1.Size = new System.Drawing.Size(417, 42);
             this.lblLine1.TabIndex = 2;
             this.lblLine1.Text = "___________________";
-            this.lblLine1.Click += new System.EventHandler(this.lblLine1_Click);
             // 
             // panel2
             // 
@@ -169,7 +168,6 @@ namespace PRG282Project.PresentationLayer
             this.lblHeading.Size = new System.Drawing.Size(338, 22);
             this.lblHeading.TabIndex = 7;
             this.lblHeading.Text = "Hi There! Please tell us who you are:";
-            this.lblHeading.Click += new System.EventHandler(this.lblHeading_Click);
             // 
             // btnExit
             // 
@@ -182,6 +180,7 @@ namespace PRG282Project.PresentationLayer
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "X";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmLogin
             // 
@@ -204,7 +203,6 @@ namespace PRG282Project.PresentationLayer
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBClogo)).EndInit();
