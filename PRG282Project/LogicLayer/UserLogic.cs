@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PRG282Project.LogicLayer
 {
-    class CheckPassword
+    class UserLogic
     {
         public bool CheckUserPassword(List<User> users, string password, string username)
         {
@@ -24,13 +24,21 @@ namespace PRG282Project.LogicLayer
                         return false;
                     }
                 }
-                else
-                {
-                    return false;
-                }
             }
 
             return false;
+        }
+
+        public void RegisterUser(List<User> users, string username, string password)
+        {
+            users.Add(new User(username, password));
+
+            FileHandler handler = new FileHandler();
+
+            List<string> tmp = FormatData.UserListToString(users);
+
+            handler.WriteUser(tmp);
+
         }
 
     }

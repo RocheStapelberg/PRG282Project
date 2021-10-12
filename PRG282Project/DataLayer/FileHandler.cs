@@ -15,8 +15,11 @@ namespace PRG282Project.DataLayer
         
         public void CreateFile()
         {
-            var dataFile = File.CreateText(filePath);
-            dataFile.Close();
+            if (!File.Exists(filePath))
+            {
+                var dataFile = File.CreateText(filePath);
+                dataFile.Close();
+            }
         }
         public List<User> GetUsers()
         {

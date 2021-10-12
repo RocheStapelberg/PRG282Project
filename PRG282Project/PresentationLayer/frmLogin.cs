@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PRG282Project.LogicLayer;
 
 namespace PRG282Project.PresentationLayer
 {
@@ -42,9 +43,24 @@ namespace PRG282Project.PresentationLayer
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmMain Main = new frmMain();
-            Main.Show();
+            UserLogic check = new UserLogic();
+            users = handler.GetUsers();
+
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+
+            if (check.CheckUserPassword(users, password, username))
+            {
+                this.Hide();
+                frmMain Main = new frmMain();
+                Main.Show();
+            }
+            else
+            {
+                MessageBox.Show("Login details incorrect");
+            }
+           
         }
 
         private void btnExit_Click_1(object sender, EventArgs e)
