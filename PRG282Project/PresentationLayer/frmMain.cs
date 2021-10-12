@@ -154,5 +154,22 @@ namespace PRG282Project.PresentationLayer
         {
             source.MoveLast();
         }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int studentnumber = int.Parse(txtStudentNumber.Text);
+                handler.deleteData(studentnumber);
+                source.DataSource = handler.getStudents();
+                dgvStudents.DataSource = source;
+                MessageBox.Show("Student Deleted");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
     }
 }
