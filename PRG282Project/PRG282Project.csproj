@@ -50,6 +50,8 @@
     <Compile Include="DataLayer\FileHandler.cs" />
     <Compile Include="DataLayer\Student.cs" />
     <Compile Include="DataLayer\User.cs" />
+    <Compile Include="LogicLayer\FormatData.cs" />
+    <Compile Include="LogicLayer\UserLogic.cs" />
     <Compile Include="PresentationLayer\frmAddStudent.cs">
       <SubType>Form</SubType>
     </Compile>

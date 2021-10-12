@@ -18,8 +18,7 @@ namespace PRG282Project.DataLayer
             try
             {
                 connection.Open();
-                return "Connection open";
-                
+                return "Connection open";                
             }
             catch (Exception ex)
             {

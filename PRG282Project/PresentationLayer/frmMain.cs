@@ -26,10 +26,12 @@ namespace PRG282Project.PresentationLayer
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            //TODO - Add try Catch
             int searchNum = int.Parse(txtSearch.Text);
             DataTable dataTable = new DataTable();
             dataTable = handler.searchStudent(searchNum);
-            dgvStudents.DataSource = dataTable;
+            source.DataSource = dataTable;
+            dgvStudents.DataSource = source;
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -42,6 +44,7 @@ namespace PRG282Project.PresentationLayer
         //@StudentNumber, @StudentName, @StudentSurname, @DateofBirth, @Gender, @StudentPhoneNumber, @StudentAddress
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            //TODO - Add Try Catch
             int studNumber = int.Parse(txtStudentNumber.Text);
             string studName = txtName.Text;
             string studSurname = txtSurname.Text;
@@ -80,6 +83,11 @@ namespace PRG282Project.PresentationLayer
             frmAddStudent addS = new frmAddStudent();
             addS.Show();
             this.Hide();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
