@@ -43,22 +43,29 @@ namespace PRG282Project.PresentationLayer
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            UserLogic check = new UserLogic();
-            users = handler.GetUsers();
-
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-
-
-            if (check.CheckUserPassword(users, password, username))
+            try
             {
-                this.Hide();
-                frmMain Main = new frmMain();
-                Main.Show();
+                UserLogic check = new UserLogic();
+                users = handler.GetUsers();
+
+                string username = txtUsername.Text;
+                string password = txtPassword.Text;
+
+
+                if (check.CheckUserPassword(users, password, username))
+                {
+                    this.Hide();
+                    frmMain Main = new frmMain();
+                    Main.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Login details incorrect");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Login details incorrect");
+                MessageBox.Show(ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
            
         }
