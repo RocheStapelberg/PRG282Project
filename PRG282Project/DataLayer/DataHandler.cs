@@ -73,7 +73,7 @@ namespace PRG282Project.DataLayer
                 cmd.Parameters.AddWithValue("@DateofBirth", dateOfBirth);
                 cmd.Parameters.AddWithValue("@Gender", gender);
                 cmd.Parameters.AddWithValue("@StudentPhoneNumber", phone);
-                cmd.Parameters.AddWithValue(" @StudentAddress", address);
+                cmd.Parameters.AddWithValue("@StudentAddress", address);
 
                 connection.Open();
                 cmd.ExecuteNonQuery();

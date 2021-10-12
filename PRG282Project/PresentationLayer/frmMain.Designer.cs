@@ -132,6 +132,7 @@
             this.groupBox4.Controls.Add(this.lblStudentNumber);
             this.groupBox4.Controls.Add(this.txtAddress);
             this.groupBox4.Controls.Add(this.txtPhone);
+            this.groupBox4.Controls.Add(this.btnDeleteStudent);
             this.groupBox4.Controls.Add(this.txtDob);
             this.groupBox4.Controls.Add(this.txtName);
             this.groupBox4.Controls.Add(this.txtStudentNumber);
@@ -164,9 +165,13 @@
             // cmbGender
             // 
             this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
             this.cmbGender.Location = new System.Drawing.Point(153, 180);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(63, 26);
+            this.cmbGender.Size = new System.Drawing.Size(86, 26);
             this.cmbGender.TabIndex = 41;
             // 
             // btnUpdate
@@ -178,8 +183,9 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(133, 60);
             this.btnUpdate.TabIndex = 53;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "Update Student";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label8
             // 
@@ -437,7 +443,6 @@
             this.groupBox2.Controls.Add(this.btnFirst);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Controls.Add(this.btnDeleteStudent);
             this.groupBox2.Controls.Add(this.btnAddStudent);
             this.groupBox2.Controls.Add(this.dgvStudents);
             this.groupBox2.Controls.Add(this.pictureBox2);
@@ -627,11 +632,11 @@
             this.btnDeleteStudent.BackColor = System.Drawing.Color.Black;
             this.btnDeleteStudent.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteStudent.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteStudent.Location = new System.Drawing.Point(157, 470);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(273, 301);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(144, 60);
             this.btnDeleteStudent.TabIndex = 46;
-            this.btnDeleteStudent.Text = "Delete a Student ";
+            this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = false;
             // 
             // btnAddStudent
@@ -656,6 +661,7 @@
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.Size = new System.Drawing.Size(526, 234);
             this.dgvStudents.TabIndex = 0;
+            this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellContentClick);
             // 
             // pictureBox2
             // 
@@ -698,7 +704,7 @@
             this.ClientSize = new System.Drawing.Size(1132, 667);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMain";
