@@ -12,6 +12,7 @@ namespace PRG282Project.LogicLayer
         public static List<string> UserListToString(List<User> users)
         {
             List<string> tmp = new List<string>();
+
             foreach (User user in users)
             {
                 tmp.Add(user.ToString());

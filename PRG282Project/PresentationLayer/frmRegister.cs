@@ -40,17 +40,19 @@ namespace PRG282Project.PresentationLayer
                 if(txtConfirm.Text == password)
                 {
                     ul.RegisterUser(users, username, password);
+                    frmLogin log = new frmLogin();
+                    log.Show();
+                    this.Hide();
+                    MessageBox.Show("User Registered");
                 }
-
-
+                else
+                {
+                    MessageBox.Show("Passwords do not match");
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                MessageBox.Show("User Registered");
             }
         }
     }

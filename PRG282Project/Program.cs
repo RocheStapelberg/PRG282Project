@@ -17,13 +17,7 @@ namespace PRG282Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new frmMain());
             Application.Run(new frmLogin());
         }
-
-        //TODO - FileHandler
-        //TODO - DataHandler
-        //TODO - Forms
-        //TODO - DB Access
     }
 }
