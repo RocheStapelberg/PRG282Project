@@ -63,7 +63,7 @@ namespace PRG282Project.DataLayer
         {
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string query = $"INSERT INTO Module VALUES ('{Mcode}',{sNum},'{Mname}','{Mdesc}','')";
+            string query = $"INSERT INTO Module VALUES ('{Mcode}',{sNum},'{Mname}','{Mdesc}','{link}')";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
             connection.Close();
