@@ -78,6 +78,18 @@ namespace PRG282Project.PresentationLayer
                 MessageBox.Show("Something went Wrong");
                 
             }
+            finally
+            {
+                txtsID.Clear();
+                txtName.Clear();
+                txtSurname.Clear();
+                cmbGender.SelectedIndex = 0;
+                txtPhone.Clear();
+                txtAddress.Clear();
+                txtMcode.Clear();
+                txtMname.Clear();
+                txtMdesc.Clear();
+            }
             
 
         }
