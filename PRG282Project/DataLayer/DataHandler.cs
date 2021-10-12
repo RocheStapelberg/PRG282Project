@@ -60,6 +60,17 @@ namespace PRG282Project.DataLayer
             }
         }
 
+        public void insertModule(string Mcode, int sNum, string Mname, string Mdesc, string link)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string query = $"INSERT INTO Module VALUES ('{Mcode}',{sNum},'{Mname}','{Mdesc}','')";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+
+        }
+
         public void updateStudent(int studentNum, string name, string surname, string gender, string dateOfBirth, string phone, string address)
         {
             using(SqlConnection connection = new SqlConnection(connectionString))

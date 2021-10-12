@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PRG282Project.DataLayer;
 
 namespace PRG282Project.PresentationLayer
 {
+    
     public partial class frmAddStudent : Form
     {
+        DataHandler dhanler = new DataHandler();
+        
         public frmAddStudent()
         {
             InitializeComponent();
@@ -44,7 +48,40 @@ namespace PRG282Project.PresentationLayer
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int Snum = int.Parse(txtsID.Text);
+                string Name = txtName.Text;
+                string surname = txtSurname.Text;
+                string dob = dtpDOB.Value.ToString();
+                string gender = cmbGender.SelectedItem.ToString();
+                string phoneNum = txtPhone.Text;
+                string address = txtAddress.Text;
+
+                dhanler.insertStudent(Snum, Name, surname, gender, dob, phoneNum, address);
+
+                string Mcode = txtMcode.Text;
+                string Mname = txtMname.Text;
+                string Mdesc = txtMdesc.Text;
+                string link = txtLink.Text;
+
+                dhanler.insertModule(Mcode, Snum, Mname, Mdesc, link);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                MessageBox.Show("Something went Wrong");
+                
+            }
+            finally
+            {
+                MessageBox.Show("Successfully added the new student");
+            }
             
+
         }
+
+       
     }
 }

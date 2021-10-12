@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddStudent));
             this.lblHeading1 = new System.Windows.Forms.Label();
             this.gbDetails = new System.Windows.Forms.GroupBox();
+            this.txtsID = new System.Windows.Forms.TextBox();
+            this.lblsID = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -47,6 +49,8 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.gbModule = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLink = new System.Windows.Forms.TextBox();
             this.txtMdesc = new System.Windows.Forms.TextBox();
             this.lblDesc = new System.Windows.Forms.Label();
             this.lblMheading = new System.Windows.Forms.Label();
@@ -78,6 +82,8 @@
             // 
             // gbDetails
             // 
+            this.gbDetails.Controls.Add(this.txtsID);
+            this.gbDetails.Controls.Add(this.lblsID);
             this.gbDetails.Controls.Add(this.txtAddress);
             this.gbDetails.Controls.Add(this.lblAddress);
             this.gbDetails.Controls.Add(this.txtPhone);
@@ -95,12 +101,32 @@
             this.gbDetails.Controls.Add(this.pbFoto);
             this.gbDetails.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDetails.ForeColor = System.Drawing.Color.Red;
-            this.gbDetails.Location = new System.Drawing.Point(29, 45);
+            this.gbDetails.Location = new System.Drawing.Point(29, 67);
             this.gbDetails.Name = "gbDetails";
             this.gbDetails.Size = new System.Drawing.Size(250, 573);
             this.gbDetails.TabIndex = 1;
             this.gbDetails.TabStop = false;
             this.gbDetails.Text = "Student Details";
+            // 
+            // txtsID
+            // 
+            this.txtsID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsID.ForeColor = System.Drawing.Color.Black;
+            this.txtsID.Location = new System.Drawing.Point(107, 276);
+            this.txtsID.Name = "txtsID";
+            this.txtsID.Size = new System.Drawing.Size(134, 21);
+            this.txtsID.TabIndex = 16;
+            // 
+            // lblsID
+            // 
+            this.lblsID.AutoSize = true;
+            this.lblsID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsID.ForeColor = System.Drawing.Color.Red;
+            this.lblsID.Location = new System.Drawing.Point(10, 279);
+            this.lblsID.Name = "lblsID";
+            this.lblsID.Size = new System.Drawing.Size(98, 12);
+            this.lblsID.TabIndex = 15;
+            this.lblsID.Text = "Student Number:";
             // 
             // txtAddress
             // 
@@ -126,7 +152,7 @@
             // 
             this.txtPhone.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.Color.Black;
-            this.txtPhone.Location = new System.Drawing.Point(105, 462);
+            this.txtPhone.Location = new System.Drawing.Point(105, 489);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(134, 21);
             this.txtPhone.TabIndex = 12;
@@ -136,7 +162,7 @@
             this.lblNum.AutoSize = true;
             this.lblNum.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNum.ForeColor = System.Drawing.Color.Red;
-            this.lblNum.Location = new System.Drawing.Point(11, 465);
+            this.lblNum.Location = new System.Drawing.Point(11, 492);
             this.lblNum.Name = "lblNum";
             this.lblNum.Size = new System.Drawing.Size(47, 14);
             this.lblNum.TabIndex = 11;
@@ -151,7 +177,7 @@
             "Male",
             "Female",
             "Other"});
-            this.cmbGender.Location = new System.Drawing.Point(105, 418);
+            this.cmbGender.Location = new System.Drawing.Point(105, 445);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(134, 22);
             this.cmbGender.TabIndex = 10;
@@ -161,7 +187,7 @@
             this.lblGen.AutoSize = true;
             this.lblGen.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGen.ForeColor = System.Drawing.Color.Red;
-            this.lblGen.Location = new System.Drawing.Point(11, 421);
+            this.lblGen.Location = new System.Drawing.Point(11, 448);
             this.lblGen.Name = "lblGen";
             this.lblGen.Size = new System.Drawing.Size(55, 14);
             this.lblGen.TabIndex = 9;
@@ -170,7 +196,7 @@
             // dtpDOB
             // 
             this.dtpDOB.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDOB.Location = new System.Drawing.Point(14, 383);
+            this.dtpDOB.Location = new System.Drawing.Point(14, 410);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(225, 20);
             this.dtpDOB.TabIndex = 8;
@@ -180,7 +206,7 @@
             this.lblDOB.AutoSize = true;
             this.lblDOB.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDOB.ForeColor = System.Drawing.Color.Red;
-            this.lblDOB.Location = new System.Drawing.Point(11, 365);
+            this.lblDOB.Location = new System.Drawing.Point(11, 392);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(97, 15);
             this.lblDOB.TabIndex = 7;
@@ -190,7 +216,7 @@
             // 
             this.txtSurname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSurname.ForeColor = System.Drawing.Color.Black;
-            this.txtSurname.Location = new System.Drawing.Point(105, 325);
+            this.txtSurname.Location = new System.Drawing.Point(105, 352);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(134, 21);
             this.txtSurname.TabIndex = 6;
@@ -200,7 +226,7 @@
             this.lblSurname.AutoSize = true;
             this.lblSurname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSurname.ForeColor = System.Drawing.Color.Red;
-            this.lblSurname.Location = new System.Drawing.Point(11, 328);
+            this.lblSurname.Location = new System.Drawing.Point(11, 355);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(63, 14);
             this.lblSurname.TabIndex = 5;
@@ -210,7 +236,7 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.Black;
-            this.txtName.Location = new System.Drawing.Point(105, 283);
+            this.txtName.Location = new System.Drawing.Point(105, 310);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(134, 21);
             this.txtName.TabIndex = 4;
@@ -220,7 +246,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.Red;
-            this.lblName.Location = new System.Drawing.Point(8, 286);
+            this.lblName.Location = new System.Drawing.Point(8, 313);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(45, 14);
             this.lblName.TabIndex = 3;
@@ -259,6 +285,8 @@
             // 
             // gbModule
             // 
+            this.gbModule.Controls.Add(this.label1);
+            this.gbModule.Controls.Add(this.txtLink);
             this.gbModule.Controls.Add(this.txtMdesc);
             this.gbModule.Controls.Add(this.lblDesc);
             this.gbModule.Controls.Add(this.lblMheading);
@@ -268,18 +296,38 @@
             this.gbModule.Controls.Add(this.lblCode);
             this.gbModule.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbModule.ForeColor = System.Drawing.Color.Yellow;
-            this.gbModule.Location = new System.Drawing.Point(298, 168);
+            this.gbModule.Location = new System.Drawing.Point(298, 140);
             this.gbModule.Name = "gbModule";
-            this.gbModule.Size = new System.Drawing.Size(223, 216);
+            this.gbModule.Size = new System.Drawing.Size(223, 269);
             this.gbModule.TabIndex = 2;
             this.gbModule.TabStop = false;
             this.gbModule.Text = "Module Information";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(6, 203);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 14);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Link";
+            // 
+            // txtLink
+            // 
+            this.txtLink.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLink.ForeColor = System.Drawing.Color.Black;
+            this.txtLink.Location = new System.Drawing.Point(9, 220);
+            this.txtLink.Name = "txtLink";
+            this.txtLink.Size = new System.Drawing.Size(197, 21);
+            this.txtLink.TabIndex = 22;
             // 
             // txtMdesc
             // 
             this.txtMdesc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMdesc.ForeColor = System.Drawing.Color.Black;
-            this.txtMdesc.Location = new System.Drawing.Point(9, 172);
+            this.txtMdesc.Location = new System.Drawing.Point(9, 165);
             this.txtMdesc.Name = "txtMdesc";
             this.txtMdesc.Size = new System.Drawing.Size(197, 21);
             this.txtMdesc.TabIndex = 21;
@@ -289,7 +337,7 @@
             this.lblDesc.AutoSize = true;
             this.lblDesc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesc.ForeColor = System.Drawing.Color.Yellow;
-            this.lblDesc.Location = new System.Drawing.Point(6, 146);
+            this.lblDesc.Location = new System.Drawing.Point(6, 141);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(78, 14);
             this.lblDesc.TabIndex = 20;
@@ -300,7 +348,7 @@
             this.lblMheading.AutoSize = true;
             this.lblMheading.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMheading.ForeColor = System.Drawing.Color.Yellow;
-            this.lblMheading.Location = new System.Drawing.Point(10, 37);
+            this.lblMheading.Location = new System.Drawing.Point(5, 22);
             this.lblMheading.Name = "lblMheading";
             this.lblMheading.Size = new System.Drawing.Size(111, 14);
             this.lblMheading.TabIndex = 19;
@@ -310,7 +358,7 @@
             // 
             this.txtMname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMname.ForeColor = System.Drawing.Color.Black;
-            this.txtMname.Location = new System.Drawing.Point(76, 110);
+            this.txtMname.Location = new System.Drawing.Point(76, 95);
             this.txtMname.Name = "txtMname";
             this.txtMname.Size = new System.Drawing.Size(130, 21);
             this.txtMname.TabIndex = 18;
@@ -319,7 +367,7 @@
             // 
             this.txtMcode.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMcode.ForeColor = System.Drawing.Color.Black;
-            this.txtMcode.Location = new System.Drawing.Point(76, 70);
+            this.txtMcode.Location = new System.Drawing.Point(76, 54);
             this.txtMcode.Name = "txtMcode";
             this.txtMcode.Size = new System.Drawing.Size(80, 21);
             this.txtMcode.TabIndex = 16;
@@ -329,7 +377,7 @@
             this.lblMname.AutoSize = true;
             this.lblMname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMname.ForeColor = System.Drawing.Color.Yellow;
-            this.lblMname.Location = new System.Drawing.Point(6, 113);
+            this.lblMname.Location = new System.Drawing.Point(6, 98);
             this.lblMname.Name = "lblMname";
             this.lblMname.Size = new System.Drawing.Size(45, 14);
             this.lblMname.TabIndex = 17;
@@ -340,7 +388,7 @@
             this.lblCode.AutoSize = true;
             this.lblCode.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCode.ForeColor = System.Drawing.Color.Yellow;
-            this.lblCode.Location = new System.Drawing.Point(6, 73);
+            this.lblCode.Location = new System.Drawing.Point(6, 57);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(42, 14);
             this.lblCode.TabIndex = 15;
@@ -351,9 +399,9 @@
             this.btnAdd.BackColor = System.Drawing.Color.Black;
             this.btnAdd.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(298, 390);
+            this.btnAdd.Location = new System.Drawing.Point(298, 415);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(223, 50);
+            this.btnAdd.Size = new System.Drawing.Size(223, 45);
             this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Add Student";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -364,9 +412,9 @@
             this.btnClear.BackColor = System.Drawing.Color.Black;
             this.btnClear.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(298, 446);
+            this.btnClear.Location = new System.Drawing.Point(298, 466);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(223, 50);
+            this.btnClear.Size = new System.Drawing.Size(223, 47);
             this.btnClear.TabIndex = 16;
             this.btnClear.Text = "Clear All Fields";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -377,7 +425,7 @@
             this.btnExit.BackColor = System.Drawing.Color.Black;
             this.btnExit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(408, 543);
+            this.btnExit.Location = new System.Drawing.Point(408, 579);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(96, 50);
             this.btnExit.TabIndex = 17;
@@ -390,7 +438,7 @@
             this.btnBack.BackColor = System.Drawing.Color.Black;
             this.btnBack.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(307, 543);
+            this.btnBack.Location = new System.Drawing.Point(306, 579);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(96, 50);
             this.btnBack.TabIndex = 18;
@@ -403,7 +451,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(298, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(223, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(223, 122);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -413,7 +461,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(561, 621);
+            this.ClientSize = new System.Drawing.Size(561, 652);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnExit);
@@ -470,5 +518,9 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtsID;
+        private System.Windows.Forms.Label lblsID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtLink;
     }
 }
