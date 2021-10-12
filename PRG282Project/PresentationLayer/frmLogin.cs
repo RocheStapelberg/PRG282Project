@@ -50,6 +50,11 @@ namespace PRG282Project.PresentationLayer
         {
             users = handler.GetUsers();
         }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
      
