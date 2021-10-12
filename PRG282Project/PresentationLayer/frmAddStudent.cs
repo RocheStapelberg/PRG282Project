@@ -36,6 +36,7 @@ namespace PRG282Project.PresentationLayer
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            txtsID.Clear();
             txtName.Clear();
             txtSurname.Clear();
             cmbGender.SelectedIndex = 0;
@@ -67,16 +68,15 @@ namespace PRG282Project.PresentationLayer
 
                 dhanler.insertModule(Mcode, Snum, Mname, Mdesc, link);
 
+
+                MessageBox.Show("Successfully added the new student");
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 MessageBox.Show("Something went Wrong");
                 
-            }
-            finally
-            {
-                MessageBox.Show("Successfully added the new student");
             }
             
 
