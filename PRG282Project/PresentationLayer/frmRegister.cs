@@ -17,6 +17,34 @@ namespace PRG282Project.PresentationLayer
             InitializeComponent();
         }
 
-       
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmLogin log = new frmLogin();
+            log.Show();
+            this.Hide();
+        }
+
+        private void btnReg_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string username = txtUsername.Text;
+                string password = txtPassword.Text;
+                if(txtConfirm.Text == password)
+                {
+                    //UserLogic.RegisterUser(username, password, users);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                MessageBox.Show("User Registered");
+            }
+        }
     }
 }

@@ -182,6 +182,7 @@ namespace PRG282Project.PresentationLayer
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
             // frmLogin
             // 

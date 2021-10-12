@@ -31,29 +31,29 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddStudent));
             this.lblHeading1 = new System.Windows.Forms.Label();
             this.gbDetails = new System.Windows.Forms.GroupBox();
-            this.btnUpload = new System.Windows.Forms.Button();
-            this.pbFoto = new System.Windows.Forms.PictureBox();
-            this.lblPic = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.lblNum = new System.Windows.Forms.Label();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
+            this.lblGen = new System.Windows.Forms.Label();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
+            this.lblDOB = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
-            this.lblDOB = new System.Windows.Forms.Label();
-            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
-            this.lblGen = new System.Windows.Forms.Label();
-            this.cmbGender = new System.Windows.Forms.ComboBox();
-            this.lblNum = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblPic = new System.Windows.Forms.Label();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.gbModule = new System.Windows.Forms.GroupBox();
-            this.txtMname = new System.Windows.Forms.TextBox();
-            this.lblMname = new System.Windows.Forms.Label();
-            this.txtMcode = new System.Windows.Forms.TextBox();
-            this.lblCode = new System.Windows.Forms.Label();
-            this.lblMheading = new System.Windows.Forms.Label();
-            this.lblDesc = new System.Windows.Forms.Label();
             this.txtMdesc = new System.Windows.Forms.TextBox();
+            this.lblDesc = new System.Windows.Forms.Label();
+            this.lblMheading = new System.Windows.Forms.Label();
+            this.txtMname = new System.Windows.Forms.TextBox();
+            this.txtMcode = new System.Windows.Forms.TextBox();
+            this.lblMname = new System.Windows.Forms.Label();
+            this.lblCode = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -102,6 +102,141 @@
             this.gbDetails.TabStop = false;
             this.gbDetails.Text = "Student Details";
             // 
+            // txtAddress
+            // 
+            this.txtAddress.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.ForeColor = System.Drawing.Color.Black;
+            this.txtAddress.Location = new System.Drawing.Point(11, 527);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(228, 23);
+            this.txtAddress.TabIndex = 14;
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.ForeColor = System.Drawing.Color.Red;
+            this.lblAddress.Location = new System.Drawing.Point(11, 509);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(122, 15);
+            this.lblAddress.TabIndex = 13;
+            this.lblAddress.Text = "Physical Address:";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.ForeColor = System.Drawing.Color.Black;
+            this.txtPhone.Location = new System.Drawing.Point(105, 462);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(134, 21);
+            this.txtPhone.TabIndex = 12;
+            // 
+            // lblNum
+            // 
+            this.lblNum.AutoSize = true;
+            this.lblNum.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNum.ForeColor = System.Drawing.Color.Red;
+            this.lblNum.Location = new System.Drawing.Point(11, 465);
+            this.lblNum.Name = "lblNum";
+            this.lblNum.Size = new System.Drawing.Size(47, 14);
+            this.lblNum.TabIndex = 11;
+            this.lblNum.Text = "Phone:";
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbGender.ForeColor = System.Drawing.Color.Black;
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
+            this.cmbGender.Location = new System.Drawing.Point(105, 418);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(134, 22);
+            this.cmbGender.TabIndex = 10;
+            // 
+            // lblGen
+            // 
+            this.lblGen.AutoSize = true;
+            this.lblGen.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGen.ForeColor = System.Drawing.Color.Red;
+            this.lblGen.Location = new System.Drawing.Point(11, 421);
+            this.lblGen.Name = "lblGen";
+            this.lblGen.Size = new System.Drawing.Size(55, 14);
+            this.lblGen.TabIndex = 9;
+            this.lblGen.Text = "Gender:";
+            // 
+            // dtpDOB
+            // 
+            this.dtpDOB.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDOB.Location = new System.Drawing.Point(14, 383);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(225, 20);
+            this.dtpDOB.TabIndex = 8;
+            // 
+            // lblDOB
+            // 
+            this.lblDOB.AutoSize = true;
+            this.lblDOB.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDOB.ForeColor = System.Drawing.Color.Red;
+            this.lblDOB.Location = new System.Drawing.Point(11, 365);
+            this.lblDOB.Name = "lblDOB";
+            this.lblDOB.Size = new System.Drawing.Size(97, 15);
+            this.lblDOB.TabIndex = 7;
+            this.lblDOB.Text = "Date Of Birth: ";
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurname.ForeColor = System.Drawing.Color.Black;
+            this.txtSurname.Location = new System.Drawing.Point(105, 325);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(134, 21);
+            this.txtSurname.TabIndex = 6;
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.ForeColor = System.Drawing.Color.Red;
+            this.lblSurname.Location = new System.Drawing.Point(11, 328);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(63, 14);
+            this.lblSurname.TabIndex = 5;
+            this.lblSurname.Text = "Surname:";
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.Black;
+            this.txtName.Location = new System.Drawing.Point(105, 283);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(134, 21);
+            this.txtName.TabIndex = 4;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Red;
+            this.lblName.Location = new System.Drawing.Point(8, 286);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(45, 14);
+            this.lblName.TabIndex = 3;
+            this.lblName.Text = "Name:";
+            // 
+            // lblPic
+            // 
+            this.lblPic.AutoSize = true;
+            this.lblPic.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPic.ForeColor = System.Drawing.Color.Red;
+            this.lblPic.Location = new System.Drawing.Point(33, 37);
+            this.lblPic.Name = "lblPic";
+            this.lblPic.Size = new System.Drawing.Size(152, 14);
+            this.lblPic.TabIndex = 2;
+            this.lblPic.Text = "Insert Student Foto Here:";
+            // 
             // btnUpload
             // 
             this.btnUpload.BackColor = System.Drawing.Color.Black;
@@ -122,141 +257,6 @@
             this.pbFoto.TabIndex = 0;
             this.pbFoto.TabStop = false;
             // 
-            // lblPic
-            // 
-            this.lblPic.AutoSize = true;
-            this.lblPic.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPic.ForeColor = System.Drawing.Color.Red;
-            this.lblPic.Location = new System.Drawing.Point(33, 37);
-            this.lblPic.Name = "lblPic";
-            this.lblPic.Size = new System.Drawing.Size(152, 14);
-            this.lblPic.TabIndex = 2;
-            this.lblPic.Text = "Insert Student Foto Here:";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.Red;
-            this.lblName.Location = new System.Drawing.Point(8, 286);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(45, 14);
-            this.lblName.TabIndex = 3;
-            this.lblName.Text = "Name:";
-            // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(105, 283);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(134, 21);
-            this.txtName.TabIndex = 4;
-            // 
-            // txtSurname
-            // 
-            this.txtSurname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSurname.ForeColor = System.Drawing.Color.White;
-            this.txtSurname.Location = new System.Drawing.Point(105, 325);
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(134, 21);
-            this.txtSurname.TabIndex = 6;
-            // 
-            // lblSurname
-            // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurname.ForeColor = System.Drawing.Color.Red;
-            this.lblSurname.Location = new System.Drawing.Point(11, 328);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(63, 14);
-            this.lblSurname.TabIndex = 5;
-            this.lblSurname.Text = "Surname:";
-            // 
-            // lblDOB
-            // 
-            this.lblDOB.AutoSize = true;
-            this.lblDOB.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDOB.ForeColor = System.Drawing.Color.Red;
-            this.lblDOB.Location = new System.Drawing.Point(11, 365);
-            this.lblDOB.Name = "lblDOB";
-            this.lblDOB.Size = new System.Drawing.Size(97, 15);
-            this.lblDOB.TabIndex = 7;
-            this.lblDOB.Text = "Date Of Birth: ";
-            // 
-            // dtpDOB
-            // 
-            this.dtpDOB.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDOB.Location = new System.Drawing.Point(14, 383);
-            this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(225, 20);
-            this.dtpDOB.TabIndex = 8;
-            // 
-            // lblGen
-            // 
-            this.lblGen.AutoSize = true;
-            this.lblGen.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGen.ForeColor = System.Drawing.Color.Red;
-            this.lblGen.Location = new System.Drawing.Point(11, 421);
-            this.lblGen.Name = "lblGen";
-            this.lblGen.Size = new System.Drawing.Size(55, 14);
-            this.lblGen.TabIndex = 9;
-            this.lblGen.Text = "Gender:";
-            // 
-            // cmbGender
-            // 
-            this.cmbGender.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbGender.ForeColor = System.Drawing.Color.White;
-            this.cmbGender.FormattingEnabled = true;
-            this.cmbGender.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Other"});
-            this.cmbGender.Location = new System.Drawing.Point(105, 418);
-            this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(134, 22);
-            this.cmbGender.TabIndex = 10;
-            // 
-            // lblNum
-            // 
-            this.lblNum.AutoSize = true;
-            this.lblNum.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNum.ForeColor = System.Drawing.Color.Red;
-            this.lblNum.Location = new System.Drawing.Point(11, 465);
-            this.lblNum.Name = "lblNum";
-            this.lblNum.Size = new System.Drawing.Size(47, 14);
-            this.lblNum.TabIndex = 11;
-            this.lblNum.Text = "Phone:";
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.ForeColor = System.Drawing.Color.White;
-            this.txtPhone.Location = new System.Drawing.Point(105, 462);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(134, 21);
-            this.txtPhone.TabIndex = 12;
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.ForeColor = System.Drawing.Color.Red;
-            this.lblAddress.Location = new System.Drawing.Point(11, 509);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(122, 15);
-            this.lblAddress.TabIndex = 13;
-            this.lblAddress.Text = "Physical Address:";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.ForeColor = System.Drawing.Color.White;
-            this.txtAddress.Location = new System.Drawing.Point(11, 527);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(228, 23);
-            this.txtAddress.TabIndex = 14;
-            // 
             // gbModule
             // 
             this.gbModule.Controls.Add(this.txtMdesc);
@@ -275,56 +275,14 @@
             this.gbModule.TabStop = false;
             this.gbModule.Text = "Module Information";
             // 
-            // txtMname
+            // txtMdesc
             // 
-            this.txtMname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMname.ForeColor = System.Drawing.Color.White;
-            this.txtMname.Location = new System.Drawing.Point(76, 110);
-            this.txtMname.Name = "txtMname";
-            this.txtMname.Size = new System.Drawing.Size(130, 21);
-            this.txtMname.TabIndex = 18;
-            // 
-            // lblMname
-            // 
-            this.lblMname.AutoSize = true;
-            this.lblMname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMname.ForeColor = System.Drawing.Color.Yellow;
-            this.lblMname.Location = new System.Drawing.Point(6, 113);
-            this.lblMname.Name = "lblMname";
-            this.lblMname.Size = new System.Drawing.Size(45, 14);
-            this.lblMname.TabIndex = 17;
-            this.lblMname.Text = "Name:";
-            // 
-            // txtMcode
-            // 
-            this.txtMcode.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMcode.ForeColor = System.Drawing.Color.White;
-            this.txtMcode.Location = new System.Drawing.Point(76, 70);
-            this.txtMcode.Name = "txtMcode";
-            this.txtMcode.Size = new System.Drawing.Size(80, 21);
-            this.txtMcode.TabIndex = 16;
-            // 
-            // lblCode
-            // 
-            this.lblCode.AutoSize = true;
-            this.lblCode.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCode.ForeColor = System.Drawing.Color.Yellow;
-            this.lblCode.Location = new System.Drawing.Point(6, 73);
-            this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(42, 14);
-            this.lblCode.TabIndex = 15;
-            this.lblCode.Text = "Code:";
-            // 
-            // lblMheading
-            // 
-            this.lblMheading.AutoSize = true;
-            this.lblMheading.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMheading.ForeColor = System.Drawing.Color.Yellow;
-            this.lblMheading.Location = new System.Drawing.Point(10, 37);
-            this.lblMheading.Name = "lblMheading";
-            this.lblMheading.Size = new System.Drawing.Size(111, 14);
-            this.lblMheading.TabIndex = 19;
-            this.lblMheading.Text = "Enter Module info:";
+            this.txtMdesc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMdesc.ForeColor = System.Drawing.Color.Black;
+            this.txtMdesc.Location = new System.Drawing.Point(9, 172);
+            this.txtMdesc.Name = "txtMdesc";
+            this.txtMdesc.Size = new System.Drawing.Size(197, 21);
+            this.txtMdesc.TabIndex = 21;
             // 
             // lblDesc
             // 
@@ -337,14 +295,56 @@
             this.lblDesc.TabIndex = 20;
             this.lblDesc.Text = "Description:";
             // 
-            // txtMdesc
+            // lblMheading
             // 
-            this.txtMdesc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMdesc.ForeColor = System.Drawing.Color.White;
-            this.txtMdesc.Location = new System.Drawing.Point(9, 172);
-            this.txtMdesc.Name = "txtMdesc";
-            this.txtMdesc.Size = new System.Drawing.Size(197, 21);
-            this.txtMdesc.TabIndex = 21;
+            this.lblMheading.AutoSize = true;
+            this.lblMheading.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMheading.ForeColor = System.Drawing.Color.Yellow;
+            this.lblMheading.Location = new System.Drawing.Point(10, 37);
+            this.lblMheading.Name = "lblMheading";
+            this.lblMheading.Size = new System.Drawing.Size(111, 14);
+            this.lblMheading.TabIndex = 19;
+            this.lblMheading.Text = "Enter Module info:";
+            // 
+            // txtMname
+            // 
+            this.txtMname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMname.ForeColor = System.Drawing.Color.Black;
+            this.txtMname.Location = new System.Drawing.Point(76, 110);
+            this.txtMname.Name = "txtMname";
+            this.txtMname.Size = new System.Drawing.Size(130, 21);
+            this.txtMname.TabIndex = 18;
+            // 
+            // txtMcode
+            // 
+            this.txtMcode.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMcode.ForeColor = System.Drawing.Color.Black;
+            this.txtMcode.Location = new System.Drawing.Point(76, 70);
+            this.txtMcode.Name = "txtMcode";
+            this.txtMcode.Size = new System.Drawing.Size(80, 21);
+            this.txtMcode.TabIndex = 16;
+            // 
+            // lblMname
+            // 
+            this.lblMname.AutoSize = true;
+            this.lblMname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMname.ForeColor = System.Drawing.Color.Yellow;
+            this.lblMname.Location = new System.Drawing.Point(6, 113);
+            this.lblMname.Name = "lblMname";
+            this.lblMname.Size = new System.Drawing.Size(45, 14);
+            this.lblMname.TabIndex = 17;
+            this.lblMname.Text = "Name:";
+            // 
+            // lblCode
+            // 
+            this.lblCode.AutoSize = true;
+            this.lblCode.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCode.ForeColor = System.Drawing.Color.Yellow;
+            this.lblCode.Location = new System.Drawing.Point(6, 73);
+            this.lblCode.Name = "lblCode";
+            this.lblCode.Size = new System.Drawing.Size(42, 14);
+            this.lblCode.TabIndex = 15;
+            this.lblCode.Text = "Code:";
             // 
             // btnAdd
             // 
@@ -357,6 +357,7 @@
             this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Add Student";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClear
             // 
@@ -424,6 +425,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAddStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddStudent";
             this.gbDetails.ResumeLayout(false);
             this.gbDetails.PerformLayout();

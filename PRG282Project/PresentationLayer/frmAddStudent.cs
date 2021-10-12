@@ -24,21 +24,27 @@ namespace PRG282Project.PresentationLayer
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmMain main = new frmMain();
             main.Show();
-            this.Hide();
+            
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtName.Clear();
             txtSurname.Clear();
-           // cmbGender.Items.Clear();
+            cmbGender.SelectedIndex = 0;
             txtPhone.Clear();
             txtAddress.Clear();
             txtMcode.Clear();
             txtMname.Clear();
             txtMdesc.Clear();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
