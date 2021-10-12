@@ -48,19 +48,19 @@ namespace PRG282Project.PresentationLayer
                 byte[] img = (byte[])row.Cells["StudentPhoto"].Value;
                 MemoryStream ms = new MemoryStream(img);
                 pbStudentfoto.Image = Image.FromStream(ms);
+
+                txtStudentNumber.Text = row.Cells["StudentNumber"].Value.ToString();
+                txtName.Text = row.Cells["StudentName"].Value.ToString();
+                txtSurname.Text = row.Cells["StudentSurname"].Value.ToString();
+                txtDob.Text = row.Cells["DateofBirth"].Value.ToString();
+                cmbGender.SelectedItem = row.Cells["Gender"].Value.ToString();
+                txtPhone.Text = row.Cells["StudentPhoneNumber"].Value.ToString();
+                txtAddress.Text = row.Cells["StudentAddress"].Value.ToString();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            txtStudentNumber.Text = row.Cells["StudentNumber"].Value.ToString();
-            txtName.Text = row.Cells["StudentName"].Value.ToString();
-            txtSurname.Text = row.Cells["StudentSurname"].Value.ToString();
-            txtDob.Text = row.Cells["DateofBirth"].Value.ToString();
-            cmbGender.SelectedItem = row.Cells["Gender"].Value.ToString();
-            txtPhone.Text = row.Cells["StudentPhoneNumber"].Value.ToString();
-            txtAddress.Text = row.Cells["StudentAddress"].Value.ToString();
 
         }
 
@@ -116,6 +116,10 @@ namespace PRG282Project.PresentationLayer
                 txtPhone.Text = row.Cells["StudentPhoneNumber"].Value.ToString();
                 txtAddress.Text = row.Cells["StudentAddress"].Value.ToString();
 
+                byte[] img = (byte[])row.Cells["StudentPhoto"].Value;
+                MemoryStream ms = new MemoryStream(img);
+                pbStudentfoto.Image = Image.FromStream(ms);
+
             }
         }
 
@@ -131,9 +135,24 @@ namespace PRG282Project.PresentationLayer
             this.Hide();
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
+        private void btnFirst_Click(object sender, EventArgs e)
         {
+            source.MoveFirst();
+        }
 
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            source.MovePrevious();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            source.MoveNext();
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            source.MoveLast();
         }
     }
 }
