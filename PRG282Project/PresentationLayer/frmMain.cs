@@ -50,7 +50,7 @@ namespace PRG282Project.PresentationLayer
             string phone = txtPhone.Text;
             string address = txtAddress.Text;
 
-            handler.updateStudent(studNumber, studName, studSurname, studDob, studGender, phone, address);
+            handler.updateStudent(studNumber, studName, studSurname, studGender, studDob, phone, address);
 
         }
 
@@ -68,6 +68,18 @@ namespace PRG282Project.PresentationLayer
                 txtPhone.Text = row.Cells["StudentPhoneNumber"].Value.ToString();
                 txtAddress.Text = row.Cells["StudentAddress"].Value.ToString();
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            frmAddStudent addS = new frmAddStudent();
+            addS.Show();
+            this.Hide();
         }
     }
 }

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblSurnameChange = new System.Windows.Forms.Label();
+            this.lblSurname = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
@@ -43,6 +45,7 @@
             this.lblStudentNumber = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
+            this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.txtDob = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtStudentNumber = new System.Windows.Forms.TextBox();
@@ -75,12 +78,9 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblSurnameChange = new System.Windows.Forms.Label();
-            this.lblSurname = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -117,6 +117,28 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Details ";
+            // 
+            // lblSurnameChange
+            // 
+            this.lblSurnameChange.AutoSize = true;
+            this.lblSurnameChange.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurnameChange.ForeColor = System.Drawing.Color.Red;
+            this.lblSurnameChange.Location = new System.Drawing.Point(138, 86);
+            this.lblSurnameChange.Name = "lblSurnameChange";
+            this.lblSurnameChange.Size = new System.Drawing.Size(65, 12);
+            this.lblSurnameChange.TabIndex = 43;
+            this.lblSurnameChange.Text = "\"Surname\"";
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.ForeColor = System.Drawing.Color.White;
+            this.lblSurname.Location = new System.Drawing.Point(27, 86);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(58, 12);
+            this.lblSurname.TabIndex = 42;
+            this.lblSurname.Text = "Surname:";
             // 
             // groupBox4
             // 
@@ -266,6 +288,18 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(128, 26);
             this.txtPhone.TabIndex = 45;
+            // 
+            // btnDeleteStudent
+            // 
+            this.btnDeleteStudent.BackColor = System.Drawing.Color.Black;
+            this.btnDeleteStudent.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteStudent.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteStudent.Location = new System.Drawing.Point(273, 301);
+            this.btnDeleteStudent.Name = "btnDeleteStudent";
+            this.btnDeleteStudent.Size = new System.Drawing.Size(144, 60);
+            this.btnDeleteStudent.TabIndex = 46;
+            this.btnDeleteStudent.Text = "Delete Student";
+            this.btnDeleteStudent.UseVisualStyleBackColor = false;
             // 
             // txtDob
             // 
@@ -465,6 +499,7 @@
             this.btnExit.TabIndex = 56;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label19
             // 
@@ -627,18 +662,6 @@
             this.label18.TabIndex = 3;
             this.label18.Text = "Student Number:";
             // 
-            // btnDeleteStudent
-            // 
-            this.btnDeleteStudent.BackColor = System.Drawing.Color.Black;
-            this.btnDeleteStudent.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteStudent.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteStudent.Location = new System.Drawing.Point(273, 301);
-            this.btnDeleteStudent.Name = "btnDeleteStudent";
-            this.btnDeleteStudent.Size = new System.Drawing.Size(144, 60);
-            this.btnDeleteStudent.TabIndex = 46;
-            this.btnDeleteStudent.Text = "Delete Student";
-            this.btnDeleteStudent.UseVisualStyleBackColor = false;
-            // 
             // btnAddStudent
             // 
             this.btnAddStudent.BackColor = System.Drawing.Color.Black;
@@ -650,6 +673,7 @@
             this.btnAddStudent.TabIndex = 41;
             this.btnAddStudent.Text = "Add a Student";
             this.btnAddStudent.UseVisualStyleBackColor = false;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // dgvStudents
             // 
@@ -674,28 +698,6 @@
             this.pictureBox2.TabIndex = 57;
             this.pictureBox2.TabStop = false;
             // 
-            // lblSurnameChange
-            // 
-            this.lblSurnameChange.AutoSize = true;
-            this.lblSurnameChange.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurnameChange.ForeColor = System.Drawing.Color.Red;
-            this.lblSurnameChange.Location = new System.Drawing.Point(138, 86);
-            this.lblSurnameChange.Name = "lblSurnameChange";
-            this.lblSurnameChange.Size = new System.Drawing.Size(65, 12);
-            this.lblSurnameChange.TabIndex = 43;
-            this.lblSurnameChange.Text = "\"Surname\"";
-            // 
-            // lblSurname
-            // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurname.ForeColor = System.Drawing.Color.White;
-            this.lblSurname.Location = new System.Drawing.Point(27, 86);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(58, 12);
-            this.lblSurname.TabIndex = 42;
-            this.lblSurname.Text = "Surname:";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -708,6 +710,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

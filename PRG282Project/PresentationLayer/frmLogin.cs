@@ -29,26 +29,27 @@ namespace PRG282Project.PresentationLayer
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string username = txtUsername.Text;
-                string password = txtPassword.Text;
-                //UserLogic.RegisterUser(username, password, users);
-              
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                MessageBox.Show("User Registered");
-            }
+            this.Hide();
+            frmRegister reg = new frmRegister();
+            reg.Show();
+            
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
             users = handler.GetUsers();
+        }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMain Main = new frmMain();
+            Main.Show();
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
