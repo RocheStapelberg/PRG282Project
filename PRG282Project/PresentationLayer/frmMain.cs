@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PRG282Project.DataLayer;
+using System.IO;
 
 namespace PRG282Project.PresentationLayer
 {
@@ -42,6 +43,10 @@ namespace PRG282Project.PresentationLayer
             lblGenderChange.Text = row.Cells["Gender"].Value.ToString();
             lblPhoneChange.Text = row.Cells["StudentPhoneNumber"].Value.ToString();
             lblAddressChange.Text = row.Cells["StudentAddress"].Value.ToString();
+
+            byte[] img = (byte[])row.Cells["StudentPhoto"].Value;
+            MemoryStream ms = new MemoryStream(img);
+            pbStudentfoto.Image = Image.FromStream(ms);
 
         }
 
