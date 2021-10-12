@@ -27,26 +27,32 @@ namespace PRG282Project.PresentationLayer
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            //TODO - Add try Catch
-            int searchNum = int.Parse(txtSearch.Text);
-            DataTable dataTable = new DataTable();
-            dataTable = handler.searchStudent(searchNum);
-            source.DataSource = dataTable;
-            dgvStudents.DataSource = source;
+            try
+            {
+                int searchNum = int.Parse(txtSearch.Text);
+                DataTable dataTable = new DataTable();
+                dataTable = handler.searchStudent(searchNum);
+                source.DataSource = dataTable;
+                dgvStudents.DataSource = source;
 
-            DataGridViewRow row = this.dgvStudents.Rows[0];
+                DataGridViewRow row = this.dgvStudents.Rows[0];
 
-            lblSNumberChange.Text = row.Cells["StudentNumber"].Value.ToString();
-            lblNameChange.Text = row.Cells["StudentName"].Value.ToString();
-            lblSurnameChange.Text = row.Cells["StudentSurname"].Value.ToString();
-            lblDobChange.Text = row.Cells["DateofBirth"].Value.ToString();
-            lblGenderChange.Text = row.Cells["Gender"].Value.ToString();
-            lblPhoneChange.Text = row.Cells["StudentPhoneNumber"].Value.ToString();
-            lblAddressChange.Text = row.Cells["StudentAddress"].Value.ToString();
+                lblSNumberChange.Text = row.Cells["StudentNumber"].Value.ToString();
+                lblNameChange.Text = row.Cells["StudentName"].Value.ToString();
+                lblSurnameChange.Text = row.Cells["StudentSurname"].Value.ToString();
+                lblDobChange.Text = row.Cells["DateofBirth"].Value.ToString();
+                lblGenderChange.Text = row.Cells["Gender"].Value.ToString();
+                lblPhoneChange.Text = row.Cells["StudentPhoneNumber"].Value.ToString();
+                lblAddressChange.Text = row.Cells["StudentAddress"].Value.ToString();
 
-            byte[] img = (byte[])row.Cells["StudentPhoto"].Value;
-            MemoryStream ms = new MemoryStream(img);
-            pbStudentfoto.Image = Image.FromStream(ms);
+                byte[] img = (byte[])row.Cells["StudentPhoto"].Value;
+                MemoryStream ms = new MemoryStream(img);
+                pbStudentfoto.Image = Image.FromStream(ms);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -60,18 +66,24 @@ namespace PRG282Project.PresentationLayer
         //@StudentNumber, @StudentName, @StudentSurname, @DateofBirth, @Gender, @StudentPhoneNumber, @StudentAddress
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //TODO - Add Try Catch and refresh datagrid
-            int studNumber = int.Parse(txtStudentNumber.Text);
-            string studName = txtName.Text;
-            string studSurname = txtSurname.Text;
-            string studDob = txtDob.Text;
-            string studGender = cmbGender.SelectedItem.ToString();
-            string phone = txtPhone.Text;
-            string address = txtAddress.Text;
+            try
+            {
+                int studNumber = int.Parse(txtStudentNumber.Text);
+                string studName = txtName.Text;
+                string studSurname = txtSurname.Text;
+                string studDob = txtDob.Text;
+                string studGender = cmbGender.SelectedItem.ToString();
+                string phone = txtPhone.Text;
+                string address = txtAddress.Text;
 
-            handler.updateStudent(studNumber, studName, studSurname, studGender, studDob, phone, address);
-            source.DataSource = handler.getStudents();
-            dgvStudents.DataSource = source;
+                handler.updateStudent(studNumber, studName, studSurname, studGender, studDob, phone, address);
+                source.DataSource = handler.getStudents();
+                dgvStudents.DataSource = source;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
