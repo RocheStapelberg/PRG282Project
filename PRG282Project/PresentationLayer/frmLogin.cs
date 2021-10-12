@@ -1,5 +1,4 @@
 ﻿using PRG282Project.DataLayer;
-using PRG282Project.LogicLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,7 +33,7 @@ namespace PRG282Project.PresentationLayer
             {
                 string username = txtUsername.Text;
                 string password = txtPassword.Text;
-                UserLogic.RegisterUser(username, password, users);
+                //UserLogic.RegisterUser(username, password, users);
               
             }
             catch (Exception ex)
