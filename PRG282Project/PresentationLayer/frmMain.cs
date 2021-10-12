@@ -32,6 +32,17 @@ namespace PRG282Project.PresentationLayer
             dataTable = handler.searchStudent(searchNum);
             source.DataSource = dataTable;
             dgvStudents.DataSource = source;
+
+            DataGridViewRow row = this.dgvStudents.Rows[0];
+
+            lblSNumberChange.Text = row.Cells["StudentNumber"].Value.ToString();
+            lblNameChange.Text = row.Cells["StudentName"].Value.ToString();
+            lblSurnameChange.Text = row.Cells["StudentSurname"].Value.ToString();
+            lblDobChange.Text = row.Cells["DateofBirth"].Value.ToString();
+            lblGenderChange.Text = row.Cells["Gender"].Value.ToString();
+            lblPhoneChange.Text = row.Cells["StudentPhoneNumber"].Value.ToString();
+            lblAddressChange.Text = row.Cells["StudentAddress"].Value.ToString();
+
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
