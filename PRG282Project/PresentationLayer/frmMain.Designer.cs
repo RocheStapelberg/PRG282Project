@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtSurname = new System.Windows.Forms.TextBox();
             this.cmbGender = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -44,12 +46,12 @@
             this.txtDob = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtStudentNumber = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblSID = new System.Windows.Forms.Label();
+            this.lblAddressChange = new System.Windows.Forms.Label();
+            this.lblPhoneChange = new System.Windows.Forms.Label();
+            this.lblGenderChange = new System.Windows.Forms.Label();
+            this.lblDobChange = new System.Windows.Forms.Label();
+            this.lblNameChange = new System.Windows.Forms.Label();
+            this.lblSNumberChange = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -77,8 +79,8 @@
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.lblSurnameChange = new System.Windows.Forms.Label();
+            this.lblSurname = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,13 +93,15 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Black;
+            this.groupBox1.Controls.Add(this.lblSurnameChange);
+            this.groupBox1.Controls.Add(this.lblSurname);
             this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.lblName);
-            this.groupBox1.Controls.Add(this.lblSID);
+            this.groupBox1.Controls.Add(this.lblAddressChange);
+            this.groupBox1.Controls.Add(this.lblPhoneChange);
+            this.groupBox1.Controls.Add(this.lblGenderChange);
+            this.groupBox1.Controls.Add(this.lblDobChange);
+            this.groupBox1.Controls.Add(this.lblNameChange);
+            this.groupBox1.Controls.Add(this.lblSNumberChange);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -138,6 +142,24 @@
             this.groupBox4.TabIndex = 41;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Update Student Details";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(17, 114);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(58, 12);
+            this.label17.TabIndex = 55;
+            this.label17.Text = "Surname:";
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Location = new System.Drawing.Point(153, 110);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(128, 26);
+            this.txtSurname.TabIndex = 54;
             // 
             // cmbGender
             // 
@@ -260,78 +282,78 @@
             this.txtStudentNumber.Size = new System.Drawing.Size(128, 26);
             this.txtStudentNumber.TabIndex = 42;
             // 
-            // label10
+            // lblAddressChange
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(34, 195);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 12);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "\"Address\"";
+            this.lblAddressChange.AutoSize = true;
+            this.lblAddressChange.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressChange.ForeColor = System.Drawing.Color.Red;
+            this.lblAddressChange.Location = new System.Drawing.Point(27, 216);
+            this.lblAddressChange.Name = "lblAddressChange";
+            this.lblAddressChange.Size = new System.Drawing.Size(61, 12);
+            this.lblAddressChange.TabIndex = 16;
+            this.lblAddressChange.Text = "\"Address\"";
             // 
-            // label11
+            // lblPhoneChange
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(144, 146);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 12);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "\"Number\"";
+            this.lblPhoneChange.AutoSize = true;
+            this.lblPhoneChange.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneChange.ForeColor = System.Drawing.Color.Red;
+            this.lblPhoneChange.Location = new System.Drawing.Point(137, 167);
+            this.lblPhoneChange.Name = "lblPhoneChange";
+            this.lblPhoneChange.Size = new System.Drawing.Size(59, 12);
+            this.lblPhoneChange.TabIndex = 15;
+            this.lblPhoneChange.Text = "\"Number\"";
             // 
-            // label12
+            // lblGenderChange
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(144, 121);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 12);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "\"Gender\"";
+            this.lblGenderChange.AutoSize = true;
+            this.lblGenderChange.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenderChange.ForeColor = System.Drawing.Color.Red;
+            this.lblGenderChange.Location = new System.Drawing.Point(137, 142);
+            this.lblGenderChange.Name = "lblGenderChange";
+            this.lblGenderChange.Size = new System.Drawing.Size(57, 12);
+            this.lblGenderChange.TabIndex = 14;
+            this.lblGenderChange.Text = "\"Gender\"";
             // 
-            // label13
+            // lblDobChange
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(144, 95);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(40, 12);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "\"DOB\"";
+            this.lblDobChange.AutoSize = true;
+            this.lblDobChange.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDobChange.ForeColor = System.Drawing.Color.Red;
+            this.lblDobChange.Location = new System.Drawing.Point(137, 113);
+            this.lblDobChange.Name = "lblDobChange";
+            this.lblDobChange.Size = new System.Drawing.Size(40, 12);
+            this.lblDobChange.TabIndex = 13;
+            this.lblDobChange.Text = "\"DOB\"";
             // 
-            // lblName
+            // lblNameChange
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.Red;
-            this.lblName.Location = new System.Drawing.Point(144, 69);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(67, 12);
-            this.lblName.TabIndex = 12;
-            this.lblName.Text = "\"FullName\"";
+            this.lblNameChange.AutoSize = true;
+            this.lblNameChange.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameChange.ForeColor = System.Drawing.Color.Red;
+            this.lblNameChange.Location = new System.Drawing.Point(137, 55);
+            this.lblNameChange.Name = "lblNameChange";
+            this.lblNameChange.Size = new System.Drawing.Size(47, 12);
+            this.lblNameChange.TabIndex = 12;
+            this.lblNameChange.Text = "\"Name\"";
             // 
-            // lblSID
+            // lblSNumberChange
             // 
-            this.lblSID.AutoSize = true;
-            this.lblSID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSID.ForeColor = System.Drawing.Color.Red;
-            this.lblSID.Location = new System.Drawing.Point(144, 47);
-            this.lblSID.Name = "lblSID";
-            this.lblSID.Size = new System.Drawing.Size(72, 12);
-            this.lblSID.TabIndex = 11;
-            this.lblSID.Text = "\"Student ID\"";
+            this.lblSNumberChange.AutoSize = true;
+            this.lblSNumberChange.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSNumberChange.ForeColor = System.Drawing.Color.Red;
+            this.lblSNumberChange.Location = new System.Drawing.Point(137, 30);
+            this.lblSNumberChange.Name = "lblSNumberChange";
+            this.lblSNumberChange.Size = new System.Drawing.Size(105, 12);
+            this.lblSNumberChange.TabIndex = 11;
+            this.lblSNumberChange.Text = "\"Student Number\"";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(33, 173);
+            this.label7.Location = new System.Drawing.Point(26, 194);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 12);
             this.label7.TabIndex = 9;
@@ -342,7 +364,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(33, 146);
+            this.label6.Location = new System.Drawing.Point(26, 167);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 12);
             this.label6.TabIndex = 8;
@@ -353,7 +375,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(33, 121);
+            this.label5.Location = new System.Drawing.Point(26, 142);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 12);
             this.label5.TabIndex = 7;
@@ -364,7 +386,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(33, 95);
+            this.label4.Location = new System.Drawing.Point(26, 113);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 12);
             this.label4.TabIndex = 6;
@@ -375,22 +397,22 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(33, 69);
+            this.label3.Location = new System.Drawing.Point(26, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 12);
+            this.label3.Size = new System.Drawing.Size(40, 12);
             this.label3.TabIndex = 5;
-            this.label3.Text = "FullName:";
+            this.label3.Text = "Name:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(33, 47);
+            this.label2.Location = new System.Drawing.Point(26, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 12);
+            this.label2.Size = new System.Drawing.Size(98, 12);
             this.label2.TabIndex = 4;
-            this.label2.Text = "StudentID:";
+            this.label2.Text = "Student Number:";
             // 
             // pictureBox1
             // 
@@ -426,7 +448,6 @@
             this.groupBox2.Size = new System.Drawing.Size(583, 658);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "View All Students";
             // 
             // btnExit
             // 
@@ -462,6 +483,7 @@
             this.btnRefresh.TabIndex = 41;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // label24
             // 
@@ -580,6 +602,7 @@
             this.btnSearch.TabIndex = 34;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -645,23 +668,27 @@
             this.pictureBox2.TabIndex = 57;
             this.pictureBox2.TabStop = false;
             // 
-            // label17
+            // lblSurnameChange
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(17, 114);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(58, 12);
-            this.label17.TabIndex = 55;
-            this.label17.Text = "Surname:";
+            this.lblSurnameChange.AutoSize = true;
+            this.lblSurnameChange.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurnameChange.ForeColor = System.Drawing.Color.Red;
+            this.lblSurnameChange.Location = new System.Drawing.Point(138, 86);
+            this.lblSurnameChange.Name = "lblSurnameChange";
+            this.lblSurnameChange.Size = new System.Drawing.Size(65, 12);
+            this.lblSurnameChange.TabIndex = 43;
+            this.lblSurnameChange.Text = "\"Surname\"";
             // 
-            // txtSurname
+            // lblSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(153, 110);
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(128, 26);
-            this.txtSurname.TabIndex = 54;
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.ForeColor = System.Drawing.Color.White;
+            this.lblSurname.Location = new System.Drawing.Point(27, 86);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(58, 12);
+            this.lblSurname.TabIndex = 42;
+            this.lblSurname.Text = "Surname:";
             // 
             // frmMain
             // 
@@ -694,12 +721,12 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblSID;
+        private System.Windows.Forms.Label lblAddressChange;
+        private System.Windows.Forms.Label lblPhoneChange;
+        private System.Windows.Forms.Label lblGenderChange;
+        private System.Windows.Forms.Label lblDobChange;
+        private System.Windows.Forms.Label lblNameChange;
+        private System.Windows.Forms.Label lblSNumberChange;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -743,5 +770,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.Label lblSurnameChange;
+        private System.Windows.Forms.Label lblSurname;
     }
 }
