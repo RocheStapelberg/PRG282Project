@@ -55,7 +55,7 @@ namespace PRG282Project.PresentationLayer
         //@StudentNumber, @StudentName, @StudentSurname, @DateofBirth, @Gender, @StudentPhoneNumber, @StudentAddress
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //TODO - Add Try Catch
+            //TODO - Add Try Catch and refresh datagrid
             int studNumber = int.Parse(txtStudentNumber.Text);
             string studName = txtName.Text;
             string studSurname = txtSurname.Text;
@@ -65,7 +65,8 @@ namespace PRG282Project.PresentationLayer
             string address = txtAddress.Text;
 
             handler.updateStudent(studNumber, studName, studSurname, studGender, studDob, phone, address);
-
+            source.DataSource = handler.getStudents();
+            dgvStudents.DataSource = source;
         }
 
         private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
