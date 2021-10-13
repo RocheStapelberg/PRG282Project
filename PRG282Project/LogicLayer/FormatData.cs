@@ -9,6 +9,11 @@ namespace PRG282Project.LogicLayer
 {
     class FormatData
     {
+        /// <summary>
+        /// Formats list of User object to a list of string.
+        /// </summary>
+        /// <param name="users">List of User objects</param>
+        /// <returns></returns>
         public static List<string> UserListToString(List<User> users)
         {
             List<string> tmp = new List<string>();

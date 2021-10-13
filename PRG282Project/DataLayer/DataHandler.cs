@@ -67,7 +67,6 @@ namespace PRG282Project.DataLayer
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
             connection.Close();
-
         }
 
         public void updateStudent(int studentNum, string name, string surname, string gender, string dateOfBirth, string phone, string address)

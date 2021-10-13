@@ -9,6 +9,13 @@ namespace PRG282Project.LogicLayer
 {
     class UserLogic
     {
+        /// <summary>
+        /// Checks for correct user name and password.
+        /// </summary>
+        /// <param name="users">List of users</param>
+        /// <param name="password">User password</param>
+        /// <param name="username">User username</param>
+        /// <returns>True if details match and false if not.</returns>
         public bool CheckUserPassword(List<User> users, string password, string username)
         {
             foreach (User user in users)
@@ -29,6 +36,12 @@ namespace PRG282Project.LogicLayer
             return false;
         }
 
+        /// <summary>
+        /// Adds a new user to a existing list of users and writes them to a file.
+        /// </summary>
+        /// <param name="users">List of users</param>
+        /// <param name="username">User usersname</param>
+        /// <param name="password">User password</param>
         public void RegisterUser(List<User> users, string username, string password)
         {
             users.Add(new User(username, password));
