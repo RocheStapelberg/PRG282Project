@@ -403,7 +403,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(223, 45);
             this.btnAdd.TabIndex = 15;
-            this.btnAdd.Text = "Add Student";
+            this.btnAdd.Text = "Add Student and Module info";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
