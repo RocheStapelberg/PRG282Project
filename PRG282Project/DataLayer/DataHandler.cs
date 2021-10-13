@@ -52,7 +52,7 @@ namespace PRG282Project.DataLayer
                 cmd.Parameters.AddWithValue("@DateofBirth", dateOfBirth);
                 cmd.Parameters.AddWithValue("@Gender", gender);
                 cmd.Parameters.AddWithValue("@StudentPhoneNumber", phone);
-                cmd.Parameters.AddWithValue(" @StudentAddress", address);
+                cmd.Parameters.AddWithValue("@StudentAddress", address);
 
                 connection.Open();
                 cmd.ExecuteNonQuery();
@@ -63,7 +63,7 @@ namespace PRG282Project.DataLayer
         {
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string query = $"INSERT INTO Module VALUES ('{Mcode}',{sNum},'{Mname}','{Mdesc}','')";
+            string query = $"INSERT INTO Module VALUES ('{Mcode}',{sNum},'{Mname}','{Mdesc}','{link}')";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
             connection.Close();

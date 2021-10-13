@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomExceptions\NoImageFound.cs" />
     <Compile Include="DataLayer\DataHandler.cs" />
     <Compile Include="DataLayer\FileHandler.cs" />
     <Compile Include="DataLayer\Student.cs" />
