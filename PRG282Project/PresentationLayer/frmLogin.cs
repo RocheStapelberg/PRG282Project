@@ -54,9 +54,9 @@ namespace PRG282Project.PresentationLayer
 
                 if (check.CheckUserPassword(users, password, username))
                 {
-                    this.Hide();
-                    frmMain Main = new frmMain();
-                    Main.Show();
+                   this.Hide();
+                   frmMain Main = new frmMain();
+                   Main.Show();
                 }
                 else
                 {
@@ -65,9 +65,9 @@ namespace PRG282Project.PresentationLayer
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+
         }
 
         private void btnExit_Click_1(object sender, EventArgs e)

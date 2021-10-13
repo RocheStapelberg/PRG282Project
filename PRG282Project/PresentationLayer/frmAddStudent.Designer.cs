@@ -274,12 +274,14 @@
             this.btnUpload.TabIndex = 1;
             this.btnUpload.Text = "Upload Image";
             this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // pbFoto
             // 
             this.pbFoto.Location = new System.Drawing.Point(36, 54);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(184, 164);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFoto.TabIndex = 0;
             this.pbFoto.TabStop = false;
             // 

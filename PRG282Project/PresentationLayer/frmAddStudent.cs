@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PRG282Project.DataLayer;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace PRG282Project.PresentationLayer
 {
@@ -51,6 +53,7 @@ namespace PRG282Project.PresentationLayer
         {
             try
             {
+                SqlConnection connection = new SqlConnection(@"Server=(local); Initial Catalog=BelgiumStudents; Integrated Security=SSPI;");
                 int Snum = int.Parse(txtsID.Text);
                 string Name = txtName.Text;
                 string surname = txtSurname.Text;
@@ -59,7 +62,20 @@ namespace PRG282Project.PresentationLayer
                 string phoneNum = txtPhone.Text;
                 string address = txtAddress.Text;
 
-                dhanler.insertStudent(Snum, Name, surname, gender, dob, phoneNum, address);
+                byte[] images = null;
+                FileStream Streem = new FileStream(imgLocation,FileMode.Open,FileAccess.Read);
+                BinaryReader brs = new BinaryReader(Streem);
+                images = brs.ReadBytes((int)Streem.Length);
+
+                connection.Open();
+                string sqlQuery = $"INSERT INTO Student(StudentPhoto) VALUES (@images)";
+                cmd = new SqlCommand(sqlQuery, connection);
+                cmd.Parameters.Add(new SqlParameter("@images", images));
+                int N = cmd.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show(N.ToString()+"Datas Saved Sccessfully");
+
+                dhanler.insertStudent(Snum, Name, surname, gender, dob, phoneNum, address, images);
 
                 string Mcode = txtMcode.Text;
                 string Mname = txtMname.Text;
@@ -94,6 +110,19 @@ namespace PRG282Project.PresentationLayer
 
         }
 
-       
+        SqlConnection connection = new SqlConnection(@"Server=(local); Initial Catalog=BelgiumStudents; Integrated Security=SSPI;");
+        string imgLocation = "";
+        SqlCommand cmd;
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "png files(*png)|*.png|jpg files(*.jpg)|*.jpg|All files(*.*)|*.*";
+            if(dialog.ShowDialog()==DialogResult.OK)
+            {
+                imgLocation = dialog.FileName.ToString();
+                pbFoto.ImageLocation = imgLocation;
+                MessageBox.Show(pbFoto.ImageLocation.ToString());
+            }
+        }
     }
 }
