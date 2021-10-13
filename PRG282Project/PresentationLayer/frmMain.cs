@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PRG282Project.DataLayer;
 using System.IO;
+using PRG282Project.CustomExceptions;
 
 namespace PRG282Project.PresentationLayer
 {
@@ -22,7 +23,6 @@ namespace PRG282Project.PresentationLayer
             InitializeComponent();
             source.DataSource = handler.getStudents();
             dgvStudents.DataSource = source;
-
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -70,8 +70,6 @@ namespace PRG282Project.PresentationLayer
             dgvStudents.DataSource = source;
         }
 
-        //int studentNum, string name, string surname, string gender, string dateOfBirth, string phone, string address
-        //@StudentNumber, @StudentName, @StudentSurname, @DateofBirth, @Gender, @StudentPhoneNumber, @StudentAddress
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -116,9 +114,23 @@ namespace PRG282Project.PresentationLayer
                 txtPhone.Text = row.Cells["StudentPhoneNumber"].Value.ToString();
                 txtAddress.Text = row.Cells["StudentAddress"].Value.ToString();
 
-                byte[] img = (byte[])row.Cells["StudentPhoto"].Value;
-                MemoryStream ms = new MemoryStream(img);
-                pbStudentfoto.Image = Image.FromStream(ms);
+                try
+                {
+                    if (row.Cells["StudentPhoto"].Value.ToString() == "")
+                    {
+                        throw new NoImageFound("No Image Found");
+                    }
+                    else 
+                    {
+                        byte[] img = (byte[])row.Cells["StudentPhoto"].Value;
+                        MemoryStream ms = new MemoryStream(img);
+                        pbStudentfoto.Image = Image.FromStream(ms);
+                    }
+                }
+                catch (NoImageFound ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
 
             }
         }

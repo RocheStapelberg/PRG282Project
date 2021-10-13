@@ -118,4 +118,9 @@ BEGIN
 	SELECT * FROM Student
 	WHERE StudentNumber = @StudentNumber
 END
-
+GO
+CREATE PROCEDURE spViewModule
+AS
+BEGIN
+	SELECT * FROM Module
+END
