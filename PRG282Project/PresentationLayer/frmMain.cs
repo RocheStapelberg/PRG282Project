@@ -22,7 +22,6 @@ namespace PRG282Project.PresentationLayer
             InitializeComponent();
             source.DataSource = handler.getStudents();
             dgvStudents.DataSource = source;
-
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -62,8 +61,6 @@ namespace PRG282Project.PresentationLayer
             dgvStudents.DataSource = source;
         }
 
-        //int studentNum, string name, string surname, string gender, string dateOfBirth, string phone, string address
-        //@StudentNumber, @StudentName, @StudentSurname, @DateofBirth, @Gender, @StudentPhoneNumber, @StudentAddress
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
