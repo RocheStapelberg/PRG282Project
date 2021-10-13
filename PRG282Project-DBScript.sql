@@ -67,12 +67,13 @@ CREATE PROCEDURE spAddStudent
 	@DateofBirth VARCHAR(50),
 	@Gender VARCHAR(50),
 	@StudentPhoneNumber VARCHAR(50),
-	@StudentAddress VARCHAR(50)
+	@StudentAddress VARCHAR(50),
+	@StudentPhoto varbinary(max)
 )
 AS
 BEGIN
 	INSERT INTO Student
-	VALUES (@StudentNumber, @StudentName, @StudentSurname, @DateofBirth, @Gender, @StudentPhoneNumber, @StudentAddress, NULL)
+	VALUES (@StudentNumber, @StudentName, @StudentSurname, @DateofBirth, @Gender, @StudentPhoneNumber, @StudentAddress, @StudentPhoto)
 END
 GO
 CREATE PROCEDURE spUpdateStudent

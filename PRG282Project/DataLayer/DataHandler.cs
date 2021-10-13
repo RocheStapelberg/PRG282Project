@@ -49,7 +49,6 @@ namespace PRG282Project.DataLayer
             return table;
         }
 
-        //@StudentNumber, @StudentName, @StudentSurname, @DateofBirth, @Gender, @StudentPhoneNumber, @StudentAddress
         public void insertStudent(int studentNum, string name, string surname, string gender, string dateOfBirth, string phone, string address, byte[] image)
         {
             using(SqlConnection connection = new SqlConnection(connectionString))
