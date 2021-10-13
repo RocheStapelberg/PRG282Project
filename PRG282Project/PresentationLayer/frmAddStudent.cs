@@ -13,11 +13,9 @@ using System.IO;
 
 namespace PRG282Project.PresentationLayer
 {
-    
     public partial class frmAddStudent : Form
     {
         DataHandler dhanler = new DataHandler();
-        
         public frmAddStudent()
         {
             InitializeComponent();
@@ -32,8 +30,7 @@ namespace PRG282Project.PresentationLayer
         {
             this.Hide();
             frmMain main = new frmMain();
-            main.Show();
-            
+            main.Show();   
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -75,7 +72,6 @@ namespace PRG282Project.PresentationLayer
 
                 dhanler.insertModule(Mcode, Snum, Mname, Mdesc, link);
 
-
                 MessageBox.Show("Successfully added the new student");
 
             }
@@ -102,7 +98,6 @@ namespace PRG282Project.PresentationLayer
         }
 
         string imgLocation = String.Empty;
-        SqlCommand cmd;
         private void btnUpload_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();

@@ -85,6 +85,8 @@ namespace PRG282Project.PresentationLayer
                 handler.updateStudent(studNumber, studName, studSurname, studGender, studDob, phone, address);
                 source.DataSource = handler.getStudents();
                 dgvStudents.DataSource = source;
+
+                MessageBox.Show("Student Updated");
             }
             catch (Exception ex)
             {
