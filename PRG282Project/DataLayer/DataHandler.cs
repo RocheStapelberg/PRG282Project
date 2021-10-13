@@ -38,6 +38,17 @@ namespace PRG282Project.DataLayer
             return dt;
         }
 
+        public DataTable getModule()
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter adapter = new SqlDataAdapter("spViewModule", connectionString);
+            adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
         //@StudentNumber, @StudentName, @StudentSurname, @DateofBirth, @Gender, @StudentPhoneNumber, @StudentAddress
         public void insertStudent(int studentNum, string name, string surname, string gender, string dateOfBirth, string phone, string address)
         {

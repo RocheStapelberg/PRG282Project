@@ -183,5 +183,17 @@ namespace PRG282Project.PresentationLayer
 
             }
         }
+
+        private void btnViewStudent_Click(object sender, EventArgs e)
+        {
+            source.DataSource = handler.getStudents();
+            dgvStudents.DataSource = source;
+        }
+
+        private void btnViewModule_Click(object sender, EventArgs e)
+        {
+            source.DataSource = handler.getModule();
+            dgvStudents.DataSource = source;
+        }
     }
 }

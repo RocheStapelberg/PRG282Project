@@ -63,6 +63,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pbStudentfoto = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnViewStudent = new System.Windows.Forms.Button();
+            this.btnViewModule = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -466,6 +468,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Black;
+            this.groupBox2.Controls.Add(this.btnViewStudent);
+            this.groupBox2.Controls.Add(this.btnViewModule);
             this.groupBox2.Controls.Add(this.btnExit);
             this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Controls.Add(this.btnRefresh);
@@ -488,6 +492,32 @@
             this.groupBox2.Size = new System.Drawing.Size(583, 658);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // btnViewStudent
+            // 
+            this.btnViewStudent.BackColor = System.Drawing.Color.Black;
+            this.btnViewStudent.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewStudent.ForeColor = System.Drawing.Color.White;
+            this.btnViewStudent.Location = new System.Drawing.Point(126, 470);
+            this.btnViewStudent.Name = "btnViewStudent";
+            this.btnViewStudent.Size = new System.Drawing.Size(101, 60);
+            this.btnViewStudent.TabIndex = 59;
+            this.btnViewStudent.Text = "Back To Students";
+            this.btnViewStudent.UseVisualStyleBackColor = false;
+            this.btnViewStudent.Click += new System.EventHandler(this.btnViewStudent_Click);
+            // 
+            // btnViewModule
+            // 
+            this.btnViewModule.BackColor = System.Drawing.Color.Black;
+            this.btnViewModule.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewModule.ForeColor = System.Drawing.Color.White;
+            this.btnViewModule.Location = new System.Drawing.Point(18, 470);
+            this.btnViewModule.Name = "btnViewModule";
+            this.btnViewModule.Size = new System.Drawing.Size(104, 60);
+            this.btnViewModule.TabIndex = 58;
+            this.btnViewModule.Text = "View Module Info";
+            this.btnViewModule.UseVisualStyleBackColor = false;
+            this.btnViewModule.Click += new System.EventHandler(this.btnViewModule_Click);
             // 
             // btnExit
             // 
@@ -672,7 +702,7 @@
             this.btnAddStudent.BackColor = System.Drawing.Color.Black;
             this.btnAddStudent.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStudent.ForeColor = System.Drawing.Color.White;
-            this.btnAddStudent.Location = new System.Drawing.Point(18, 470);
+            this.btnAddStudent.Location = new System.Drawing.Point(409, 470);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(133, 60);
             this.btnAddStudent.TabIndex = 41;
@@ -787,5 +817,7 @@
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label lblSurnameChange;
         private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.Button btnViewStudent;
+        private System.Windows.Forms.Button btnViewModule;
     }
 }
